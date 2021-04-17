@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping
 
 @SpringBootApplication
 @RestController
-open class GreetingApplication {
+class GreetingApplication {
     @GetMapping("/hello")
     fun hello(@RequestParam(value = "name", defaultValue = "World") name: String?): String? {
         return String.format("Hello %s!", name)
